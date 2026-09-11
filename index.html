@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARVIQUE | Elevate Everyday Living</title>
+
+  <meta
+    name="description"
+    content="ARVIQUE creates thoughtful, modern and functional products designed to make everyday living simpler, smarter and more beautiful."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0D1B2A;
+      --navy-light: #172A3A;
+      --cream: #F8F6F1;
+      --white: #FFFFFF;
+      --text: #20252A;
+      --muted: #6C737A;
+      --line: #E6E3DC;
+      --accent: #C6A76A;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: "Manrope", sans-serif;
+      line-height: 1.15;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: auto;
+    }
+
+    .announcement {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 10px 15px;
+      font-size: 13px;
+      letter-spacing: .4px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248,246,241,.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,.06);
+    }
+
+    nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Manrope", sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      color: var(--navy);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: var(--navy-light);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--navy);
+      color: var(--navy);
+      margin-left: 10px;
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 60px;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 6vw, 82px);
+      color: var(--navy);
+      max-width: 700px;
+    }
+
+    .hero p {
+      max-width: 610px;
+      margin: 24px 0 32px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .hero-image {
+      min-height: 570px;
+      border-radius: 28px;
+      background:
+        linear-gradient(rgba(13,27,42,.12), rgba(13,27,42,.12)),
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85")
+        center/cover;
+      box-shadow: 0 25px 60px rgba(0,0,0,.12);
+    }
+
+    section {
+      padding: 95px 0;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 45px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(34px, 4vw, 52px);
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .category-card {
+      background: white;
+      border-radius: 22px;
+      overflow: hidden;
+      transition: .3s;
+    }
+
+    .category-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 18px 40px rgba(0,0,0,.08);
+    }
+
+    .category-image {
+      height: 320px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .category-card:nth-child(1) .category-image {
+      background-image: url("https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .category-card:nth-child(2) .category-image {
+      background-image: url("https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .category-card:nth-child(3) .category-image {
+      background-image: url("https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .category-content {
+      padding: 26px;
+    }
+
+    .category-content h3 {
+      font-size: 22px;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .category-content p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .product-section {
+      background: var(--navy);
+      color: white;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .product-visual {
+      height: 520px;
+      border-radius: 26px;
+      background:
+        url("https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?auto=format&fit=crop&w=1200&q=80")
+        center/cover;
+    }
+
+    .product-info h2 {
+      font-size: clamp(38px, 5vw, 58px);
+      margin-bottom: 20px;
+    }
+
+    .product-info p {
+      color: #CBD2D8;
+      margin-bottom: 28px;
+      font-size: 17px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .feature {
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .feature strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .product-info .btn {
+      background: white;
+      color: var(--navy);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .why-card {
+      padding: 30px;
+      background: white;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+    }
+
+    .why-number {
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .why-card h3 {
+      margin-bottom: 9px;
+      color: var(--navy);
+    }
+
+    .why-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .story {
+      background: #ECE8DF;
+    }
+
+    .story-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .story h2 {
+      font-size: clamp(38px, 5vw, 58px);
+      color: var(--navy);
+      margin-bottom: 22px;
+    }
+
+    .story p {
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    .support {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .support-box {
+      background: white;
+      padding: 50px;
+      border-radius: 24px;
+    }
+
+    .support-box h2 {
+      color: var(--navy);
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+
+    .support-links {
+      margin-top: 30px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .support-links a {
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      font-weight: 600;
+    }
+
+    footer {
+      background: #09141F;
+      color: white;
+      padding: 70px 0 35px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 55px;
+    }
+
+    footer h4 {
+      margin-bottom: 17px;
+    }
+
+    footer a {
+      display: block;
+      color: #AAB3BB;
+      margin: 9px 0;
+      font-size: 14px;
+    }
+
+    footer p {
+      color: #AAB3BB;
+      font-size: 14px;
+      max-width: 340px;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.12);
+      padding-top: 25px;
+      color: #87919A;
+      font-size: 13px;
+    }
+
+    @media(max-width: 900px) {
+      .nav-links a:not(.btn) {
+        display: none;
+      }
+
+      .hero,
+      .product-grid,
+      .support {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      .hero-image {
+        min-height: 420px;
+      }
+
+      .categories {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media(max-width: 600px) {
+      .hero h1 {
+        font-size: 45px;
+      }
+
+      .hero-image {
+        min-height: 350px;
+      }
+
+      .features,
+      .why-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .btn-outline {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    Welcome to ARVIQUE — Thoughtfully Designed for Better Living
+  </div>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">ARVIQUE</a>
+
+        <div class="nav-links">
+          <a href="#shop">Shop</a>
+          <a href="#about">About</a>
+          <a href="#support">Support</a>
+          <a href="#shop" class="btn btn-primary">Shop Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <div class="container hero">
+        <div>
+          <div class="eyebrow">Modern essentials for modern homes</div>
+
+          <h1>Elevate Everyday Living.</h1>
+
+          <p>
+            Thoughtfully designed products that combine intelligent functionality,
+            modern aesthetics and everyday convenience.
+          </p>
+
+          <a href="#shop" class="btn btn-primary">Shop ARVIQUE</a>
+          <a href="#about" class="btn btn-outline">Discover Our Story</a>
+        </div>
+
+        <div class="hero-image"></div>
+      </div>
+    </section>
+
+    <section id="shop">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Explore ARVIQUE</div>
+          <h2>Everyday problems. Thoughtfully solved.</h2>
+          <p>
+            Discover functional products designed to make your spaces cleaner,
+            smarter and beautifully organised.
+          </p>
+        </div>
+
+        <div class="categories">
+
+          <div class="category-card">
+            <div class="category-image"></div>
+            <div class="category-content">
+              <h3>Laundry Solutions</h3>
+              <p>
+                Space-saving clothes drying solutions designed for modern homes.
+              </p>
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image"></div>
+            <div class="category-content">
+              <h3>Beauty Organisation</h3>
+              <p>
+                Elegant organisers that keep everyday essentials beautifully arranged.
+              </p>
+            </div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image"></div>
+            <div class="category-content">
+              <h3>Home Organisation</h3>
+              <p>
+                Intelligent storage solutions for cleaner and calmer spaces.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section">
+      <div class="container product-grid">
+
+        <div class="product-visual"></div>
+
+        <div class="product-info">
+          <div class="eyebrow">ARVIQUE Bestseller</div>
+
+          <h2>Retractable Clothesline</h2>
+
+          <p>
+            A minimalist, space-saving clothes drying system created for balconies,
+            bathrooms, utility areas and modern apartments.
+          </p>
+
+          <div class="features">
+            <div class="feature">
+              <strong>Up to 5.2M Reach</strong>
+              Extended drying space when you need it.
+            </div>
+
+            <div class="feature">
+              <strong>Retractable Design</strong>
+              Disappears neatly when not in use.
+            </div>
+
+            <div class="feature">
+              <strong>304 Stainless Steel</strong>
+              Durable cable designed for everyday use.
+            </div>
+
+            <div class="feature">
+              <strong>Adjustable Tension</strong>
+              Designed to help maintain a firm drying line.
+            </div>
+          </div>
+
+          <!-- Replace # with your Amazon product URL -->
+          <a href="#" target="_blank" class="btn">
+            Buy on Amazon
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Why ARVIQUE</div>
+          <h2>Designed with purpose.</h2>
+        </div>
+
+        <div class="why-grid">
+
+          <div class="why-card">
+            <div class="why-number">01</div>
+            <h3>Thoughtful Design</h3>
+            <p>
+              Products created around real everyday needs and modern lifestyles.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-number">02</div>
+            <h3>Practical Function</h3>
+            <p>
+              Every detail is selected to improve convenience and usability.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-number">03</div>
+            <h3>Modern Aesthetics</h3>
+            <p>
+              Minimal forms designed to complement contemporary homes.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-number">04</div>
+            <h3>Customer First</h3>
+            <p>
+              Product support designed to continue long after your purchase.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="story" id="about">
+      <div class="container story-content">
+        <div class="eyebrow">Our Philosophy</div>
+
+        <h2>Better living begins with better design.</h2>
+
+        <p>
+          At ARVIQUE, we believe everyday products shouldn't simply perform a
+          function — they should make life feel easier, cleaner and more considered.
+          We create practical home essentials with a focus on functionality,
+          simplicity and contemporary design.
+        </p>
+      </div>
+    </section>
+
+    <section id="support">
+      <div class="container support">
+
+        <div>
+          <div class="eyebrow">ARVIQUE Care</div>
+
+          <div class="section-heading">
+            <h2>We're here after your purchase too.</h2>
+
+            <p>
+              Access installation guidance, product support and warranty assistance
+              whenever you need it.
+            </p>
+          </div>
+        </div>
+
+        <div class="support-box">
+          <h2>Product Support</h2>
+
+          <p>
+            Everything you need to get the best experience from your ARVIQUE product.
+          </p>
+
+          <div class="support-links">
+            <a href="#">▶ Installation Guides</a>
+            <a href="#">✓ Register Warranty</a>
+            <a href="mailto:elarioglobal@gmail.com">✉ Contact Support</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <div class="logo" style="color:white; margin-bottom:18px;">
+            ARVIQUE
+          </div>
+
+          <p>
+            Thoughtfully designed essentials for smarter, simpler and more beautiful
+            everyday living.
+          </p>
+        </div>
+
+        <div>
+          <h4>Shop</h4>
+          <a href="#shop">Laundry Solutions</a>
+          <a href="#shop">Organisation</a>
+          <a href="#shop">All Products</a>
+        </div>
+
+        <div>
+          <h4>ARVIQUE</h4>
+          <a href="#about">About Us</a>
+          <a href="#support">Support</a>
+          <a href="#">Warranty</a>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <a href="mailto:elarioglobal@gmail.com">
+            elarioglobal@gmail.com
+          </a>
+          <a href="#">Amazon Store</a>
+          <a href="#">Instagram</a>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 ARVIQUE. All Rights Reserved. | Elario Global
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
