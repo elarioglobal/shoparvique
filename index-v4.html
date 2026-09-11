@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARVIQUE | Smart Living, Elevated</title>
+  <meta name="description" content="Shop ARVIQUE smart home essentials. Discover the ARVIQUE 4.2M Retractable Clothesline in Black — a premium space-saving drying solution for modern homes." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --navy:#0D1B2A;
+      --navy-2:#14283B;
+      --gold:#B7955B;
+      --cream:#F8F6F1;
+      --warm:#EEE9DF;
+      --white:#FFFFFF;
+      --text:#17212B;
+      --muted:#6D747B;
+      --line:#E6E1D7;
+      --soft:#F3F0E9;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:"DM Sans",sans-serif;
+      background:var(--cream);
+      color:var(--text);
+      line-height:1.6;
+    }
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    h1,h2,h3,h4{font-family:"Manrope",sans-serif;line-height:1.1}
+    .container{width:min(1180px,90%);margin:auto}
+
+    .announcement{
+      background:var(--navy);
+      color:#fff;
+      text-align:center;
+      padding:10px 16px;
+      font-size:13px;
+      letter-spacing:.35px;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(248,246,241,.96);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(13,27,42,.08);
+    }
+
+    nav{
+      min-height:82px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+    }
+
+    .logo img{height:52px;width:auto;object-fit:contain}
+    .nav-links{display:flex;align-items:center;gap:28px}
+    .nav-links a{font-size:14px;font-weight:600}
+    .nav-links a:hover{color:var(--gold)}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      min-height:48px;
+      padding:0 24px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:14px;
+      transition:.25s ease;
+      border:1px solid transparent;
+    }
+    .btn-primary{background:var(--navy);color:#fff}
+    .btn-primary:hover{background:var(--navy-2);transform:translateY(-2px)}
+    .btn-outline{border-color:var(--navy);color:var(--navy);background:transparent}
+    .btn-outline:hover{background:var(--navy);color:#fff}
+    .btn-light{background:#fff;color:var(--navy)}
+    .btn-light:hover{transform:translateY(-2px)}
+
+    .eyebrow{
+      color:var(--gold);
+      text-transform:uppercase;
+      letter-spacing:2.1px;
+      font-size:12px;
+      font-weight:800;
+      margin-bottom:16px;
+    }
+
+    section{padding:88px 0}
+
+    /* HERO */
+    .hero{
+      min-height:76vh;
+      display:grid;
+      grid-template-columns:1.02fr .98fr;
+      align-items:center;
+      gap:64px;
+      padding:70px 0;
+    }
+    .hero h1{
+      color:var(--navy);
+      font-size:clamp(46px,5.4vw,72px);
+      max-width:640px;
+      margin-bottom:22px;
+    }
+    .hero p{
+      color:var(--muted);
+      font-size:18px;
+      max-width:610px;
+      margin-bottom:28px;
+    }
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+    .trust-line{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      color:#596169;
+      font-size:13px;
+    }
+    .hero-card{
+      background:#fff;
+      border-radius:30px;
+      padding:28px;
+      box-shadow:0 24px 60px rgba(13,27,42,.10);
+      border:1px solid rgba(13,27,42,.05);
+    }
+    .hero-card img{
+      width:100%;
+      aspect-ratio:1/1;
+      object-fit:contain;
+      border-radius:22px;
+    }
+
+    /* BRAND STRIP */
+    .brand-strip{
+      background:#fff;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      padding:24px 0;
+    }
+    .brand-strip-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+    .brand-pill{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size:14px;
+      font-weight:700;
+      color:var(--navy);
+    }
+    .brand-pill span{
+      width:32px;height:32px;border-radius:50%;
+      background:var(--soft);
+      display:grid;place-items:center;
+      color:var(--gold);
+      flex:none;
+    }
+
+    /* INTRO */
+    .intro{background:#fff}
+    .split{
+      display:grid;
+      grid-template-columns:.92fr 1.08fr;
+      gap:70px;
+      align-items:center;
+    }
+    .media-card img{width:100%;border-radius:28px}
+    .section-title{
+      color:var(--navy);
+      font-size:clamp(36px,4.5vw,56px);
+      margin-bottom:18px;
+    }
+    .section-copy{
+      color:var(--muted);
+      font-size:17px;
+      max-width:650px;
+    }
+    .price-row{
+      display:flex;
+      align-items:end;
+      gap:14px;
+      margin:26px 0;
+    }
+    .price{
+      color:var(--navy);
+      font-family:"Manrope",sans-serif;
+      font-size:40px;
+      font-weight:800;
+    }
+    .price-note{font-size:13px;color:var(--muted);padding-bottom:7px}
+
+    /* SHOP */
+    .shop-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:22px;
+    }
+    .product-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      overflow:hidden;
+    }
+    .product-card img{
+      width:100%;
+      aspect-ratio:1/1;
+      object-fit:cover;
+      background:#fff;
+    }
+    .product-card-body{padding:24px}
+    .product-card h3{font-size:21px;color:var(--navy);margin-bottom:8px}
+    .product-card p{color:var(--muted);font-size:14px;margin-bottom:16px}
+    .product-card-price{font-size:24px;font-weight:800;color:var(--navy);margin-bottom:16px}
+
+    /* FEATURES */
+    .features-head{max-width:760px;margin-bottom:42px}
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+    }
+    .feature-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:28px;
+    }
+    .feature-no{font-size:12px;font-weight:800;color:var(--gold);margin-bottom:26px}
+    .feature-card h3{font-size:20px;color:var(--navy);margin-bottom:10px}
+    .feature-card p{font-size:14px;color:var(--muted)}
+
+    /* DARK SHOWCASE */
+    .dark{background:var(--navy);color:#fff}
+    .dark .section-title{color:#fff}
+    .dark .section-copy{color:#B8C1C9}
+    .showcase-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:26px;
+      margin-top:36px;
+    }
+    .showcase-card{
+      background:#14283B;
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.06);
+    }
+    .showcase-card img{
+      width:100%;
+      aspect-ratio:1/1;
+      object-fit:cover;
+    }
+    .showcase-copy{padding:24px}
+    .showcase-copy h3{font-size:23px;margin-bottom:8px}
+    .showcase-copy p{font-size:14px;color:#B8C1C9}
+
+    /* SPECS */
+    .specs{background:#fff}
+    .spec-list{display:grid;margin-top:26px}
+    .spec-row{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      padding:16px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .spec-row span:first-child{color:var(--muted)}
+    .spec-row span:last-child{color:var(--navy);font-weight:700;text-align:right}
+
+    /* USE CASES */
+    .use-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:58px;
+      align-items:center;
+    }
+    .use-pills{display:grid;gap:11px;margin:24px 0}
+    .use-pills div{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:13px 16px;
+      font-weight:600;
+      font-size:14px;
+    }
+
+    /* SUPPORT */
+    .support{background:var(--warm)}
+    .support-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:54px;
+      align-items:center;
+    }
+    .support-card{
+      background:#fff;
+      border-radius:24px;
+      padding:30px;
+      border:1px solid var(--line);
+    }
+    .support-links{display:grid;gap:12px;margin-top:22px}
+    .support-links a{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      padding:15px 17px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      font-weight:700;
+      font-size:14px;
+      transition:.2s;
+    }
+    .support-links a:hover{background:var(--navy);color:#fff}
+
+    /* CTA */
+    .cta{text-align:center}
+    .cta-inner{max-width:790px;margin:auto}
+    .cta h2{font-size:clamp(38px,5vw,58px);margin-bottom:16px}
+    .cta p{color:#C0C8CF;font-size:17px;margin-bottom:26px}
+
+    /* FOOTER */
+    footer{
+      background:#08131E;
+      color:#fff;
+      padding:64px 0 28px;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr;
+      gap:50px;
+      margin-bottom:42px;
+    }
+    .footer-logo img{
+      height:58px;
+      width:auto;
+      background:#fff;
+      border-radius:8px;
+      padding:5px 10px;
+      margin-bottom:16px;
+    }
+    footer p,footer a{color:#A7B0B8;font-size:14px}
+    footer h4{margin-bottom:14px}
+    footer a{display:block;margin:8px 0}
+    footer a:hover{color:#fff}
+    .copyright{
+      border-top:1px solid rgba(255,255,255,.1);
+      padding-top:24px;
+      font-size:13px;
+      color:#7E8993;
+    }
+
+    @media(max-width:900px){
+      .nav-links a:not(.btn){display:none}
+      .hero,.split,.use-grid,.support-grid{grid-template-columns:1fr}
+      .feature-grid,.brand-strip-grid{grid-template-columns:1fr 1fr}
+      .shop-grid{grid-template-columns:1fr 1fr}
+      .showcase-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:600px){
+      section{padding:68px 0}
+      nav{min-height:72px}
+      .logo img{height:42px}
+      .hero{padding:50px 0}
+      .hero h1{font-size:44px}
+      .hero-actions{flex-direction:column}
+      .hero-actions .btn{width:100%}
+      .feature-grid,.brand-strip-grid,.shop-grid,.footer-grid{grid-template-columns:1fr}
+      .price{font-size:34px}
+      .spec-row{font-size:14px}
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    Free Delivery Available Through Amazon • Secure Purchase via Amazon.in
+  </div>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a class="logo" href="#">
+          <img src="ARVIQUE LOGO.png" alt="ARVIQUE Logo">
+        </a>
+
+        <div class="nav-links">
+          <a href="#shop">Shop</a>
+          <a href="#features">Features</a>
+          <a href="#specs">Specifications</a>
+          <a href="#support">Support</a>
+          <a class="btn btn-primary" href="https://www.amazon.in/dp/B0HDT9NF1F" target="_blank" rel="noopener">Buy on Amazon</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <div class="container hero">
+        <div>
+          <div class="eyebrow">ARVIQUE • Smart Living, Elevated</div>
+          <h1>Dry Smarter.<br>Live Better.</h1>
+          <p>
+            Meet the ARVIQUE 4.2M Retractable Clothesline in Black — a refined,
+            space-saving drying solution built for balconies, bathrooms, utility
+            spaces and modern compact homes.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://www.amazon.in/dp/B0HDT9NF1F" target="_blank" rel="noopener" class="btn btn-primary">Buy on Amazon — ₹1,099</a>
+            <a href="#features" class="btn btn-outline">Explore Product</a>
+          </div>
+
+          <div class="trust-line">
+            <span>✓ 4.2M / 13.8 ft reach</span>
+            <span>✓ 304 stainless steel wire</span>
+            <span>✓ Retractable space-saving design</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img src="black-42-main.jpeg" alt="ARVIQUE 4.2M Black Retractable Clothesline">
+        </div>
+      </div>
+    </section>
+
+    <div class="brand-strip">
+      <div class="container brand-strip-grid">
+        <div class="brand-pill"><span>01</span> Thoughtful Design</div>
+        <div class="brand-pill"><span>02</span> Modern Aesthetics</div>
+        <div class="brand-pill"><span>03</span> Everyday Function</div>
+        <div class="brand-pill"><span>04</span> Customer Support</div>
+      </div>
+    </div>
+
+    <section class="intro">
+      <div class="container split">
+        <div class="media-card">
+          <img src="img2(4).jpg" alt="ARVIQUE retractable clothesline installed in a modern home">
+        </div>
+
+        <div>
+          <div class="eyebrow">ARVIQUE Laundry Solutions</div>
+          <h2 class="section-title">Designed to appear only when you need it.</h2>
+          <p class="section-copy">
+            Pull it out when it is time to dry your clothes. Retract it when you are done.
+            ARVIQUE creates useful drying space without permanently occupying valuable room.
+          </p>
+
+          <div class="price-row">
+            <div class="price">₹1,099</div>
+            <div class="price-note">Available on Amazon.in</div>
+          </div>
+
+          <a href="https://www.amazon.in/dp/B0HDT9NF1F" target="_blank" rel="noopener" class="btn btn-primary">Shop on Amazon</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop">
+      <div class="container">
+        <div class="features-head">
+          <div class="eyebrow">Shop ARVIQUE</div>
+          <h2 class="section-title">Featured Product</h2>
+          <p class="section-copy">This is the first product in our growing range of smart, space-conscious home essentials.</p>
+        </div>
+
+        <div class="shop-grid">
+          <article class="product-card">
+            <img src="black-42-main.jpeg" alt="ARVIQUE 4.2M Single Rope Retractable Clothesline in Black">
+            <div class="product-card-body">
+              <h3>Retractable Clothesline 4.2M</h3>
+              <p>Single Rope • Black • Wall Mounted</p>
+              <div class="product-card-price">₹1,099</div>
+              <a href="https://www.amazon.in/dp/B0HDT9NF1F" target="_blank" rel="noopener" class="btn btn-primary">Buy on Amazon</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="white-double-42-main.png" alt="ARVIQUE 4.2M Double Rope Retractable Clothesline in White">
+            <div class="product-card-body">
+              <h3>Retractable Clothesline 4.2M</h3>
+              <p>Double Rope • White • Wall Mounted</p>
+              <div class="product-card-price">₹1,259</div>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                <a href="#white-double-42" class="btn btn-outline">View Details</a>
+                <a href="https://www.amazon.in/dp/B0HFCY5SKC" target="_blank" rel="noopener" class="btn btn-primary">Buy on Amazon</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="white-double-42" style="background:#fff;">
+      <div class="container split">
+        <div class="media-card">
+          <img src="white-double-42-hero.jpeg" alt="ARVIQUE 4.2M Double Rope Retractable Clothesline in White installed on a balcony">
+        </div>
+
+        <div>
+          <div class="eyebrow">ARVIQUE Double Rope Series</div>
+          <h2 class="section-title">Twice the line. More room to dry.</h2>
+          <p class="section-copy">
+            The ARVIQUE 4.2M Double Rope Retractable Clothesline gives you two parallel drying lines
+            in one clean wall-mounted system. Extend it when laundry day calls, then retract both lines
+            to keep your balcony, bathroom or utility area open and uncluttered.
+          </p>
+
+          <div class="price-row">
+            <div class="price">₹1,259</div>
+            <div class="price-note">Available on Amazon.in</div>
+          </div>
+
+          <div class="trust-line" style="margin-bottom:24px;">
+            <span>✓ 4.2M double-rope drying space</span>
+            <span>✓ Adjustable tension</span>
+            <span>✓ Indoor & outdoor use</span>
+          </div>
+
+          <a href="https://www.amazon.in/dp/B0HFCY5SKC" target="_blank" rel="noopener" class="btn btn-primary">Buy White Double Rope — ₹1,259</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:var(--soft);">
+      <div class="container">
+        <div class="features-head">
+          <div class="eyebrow">4.2M Double Rope • White</div>
+          <h2 class="section-title">More drying capacity. Less permanent clutter.</h2>
+          <p class="section-copy">
+            Designed for modern homes that need generous drying space without dedicating floor area to a traditional drying rack.
+          </p>
+        </div>
+
+        <div class="showcase-grid">
+          <div class="showcase-card" style="background:#fff;color:var(--text);border-color:var(--line);">
+            <img src="white-double-42-comparison.jpeg" alt="Traditional drying rack compared with ARVIQUE retractable clothesline">
+            <div class="showcase-copy">
+              <h3 style="color:var(--navy);">Dry More. Use Less Space.</h3>
+              <p style="color:var(--muted);">A wall-mounted retractable solution keeps valuable floor space free when the clothesline is not in use.</p>
+            </div>
+          </div>
+
+          <div class="showcase-card" style="background:#fff;color:var(--text);border-color:var(--line);">
+            <img src="white-double-42-usecases.jpeg" alt="ARVIQUE white double rope clothesline for indoor and outdoor spaces">
+            <div class="showcase-copy">
+              <h3 style="color:var(--navy);">Indoor or Outdoor</h3>
+              <p style="color:var(--muted);">Suitable for bathrooms, utility areas, balconies, terraces and service spaces.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:#fff;">
+      <div class="container split">
+        <div class="media-card">
+          <img src="white-double-42-specs.jpeg" alt="ARVIQUE white double rope clothesline specifications and included accessories">
+        </div>
+
+        <div>
+          <div class="eyebrow">Product Details</div>
+          <h2 class="section-title">Everything you need to get started.</h2>
+          <p class="section-copy">
+            A 4.2M double-rope system with adjustable tension and retractable operation, supplied with mounting hardware and installation accessories.
+          </p>
+
+          <div class="spec-list">
+            <div class="spec-row"><span>Line Type</span><span>Double Rope</span></div>
+            <div class="spec-row"><span>Maximum Length</span><span>4.2 Meter</span></div>
+            <div class="spec-row"><span>Colour</span><span>White</span></div>
+            <div class="spec-row"><span>Product Size</span><span>24 × 8.8 × 5.7 cm</span></div>
+            <div class="spec-row"><span>Installation</span><span>No-Drill or Screw Mount</span></div>
+            <div class="spec-row"><span>Tension</span><span>Adjustable</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:var(--warm);">
+      <div class="container split">
+        <div>
+          <div class="eyebrow">Flexible Installation</div>
+          <h2 class="section-title">Choose the setup that suits your space.</h2>
+          <p class="section-copy">
+            Use the supplied no-nail adhesive for a drill-free installation on a suitable surface, or use screws and anchors for a traditional fixed installation.
+          </p>
+          <div style="margin-top:26px;">
+            <a href="https://www.amazon.in/dp/B0HFCY5SKC" target="_blank" rel="noopener" class="btn btn-primary">Shop Double Rope on Amazon</a>
+          </div>
+        </div>
+
+        <div class="media-card">
+          <img src="white-double-42-installation.jpeg" alt="ARVIQUE 4.2M Double Rope Clothesline no-drill and screw installation options">
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="features-head">
+          <div class="eyebrow">Thoughtful Engineering</div>
+          <h2 class="section-title">Small footprint. Serious functionality.</h2>
+          <p class="section-copy">Designed to solve everyday drying problems while keeping your living space clean and uncluttered.</p>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-no">01</div>
+            <h3>4.2 Meter Reach</h3>
+            <p>Extends up to 4.2 m / 13.8 ft to create generous drying space only when you need it.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-no">02</div>
+            <h3>304 Stainless Steel</h3>
+            <p>Durable stainless steel wire designed for repeated everyday indoor and outdoor use.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-no">03</div>
+            <h3>Twist-to-Lock</h3>
+            <p>A simple rotary locking mechanism helps hold the line securely at your chosen extension.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-no">04</div>
+            <h3>Up to 20 KG</h3>
+            <p>Designed to support up to 20 kg when correctly installed on a suitable and secure wall surface.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark">
+      <div class="container">
+        <div class="eyebrow">Built for Everyday Life</div>
+        <h2 class="section-title">Practical details that make a difference.</h2>
+        <p class="section-copy">From its compact housing to its retractable stainless steel wire, every detail is designed around real daily use.</p>
+
+        <div class="showcase-grid">
+          <div class="showcase-card">
+            <img src="img4(2).jpg" alt="ARVIQUE stainless steel wire and locking mechanism">
+            <div class="showcase-copy">
+              <h3>Strong, Secure & Designed for Daily Use</h3>
+              <p>304 stainless steel wire and a rotary locking mechanism come together in one compact wall-mounted solution.</p>
+            </div>
+          </div>
+
+          <div class="showcase-card">
+            <img src="img9.jpg" alt="ARVIQUE 4.2 meter retractable clothesline extended with clothes">
+            <div class="showcase-copy">
+              <h3>Up to 4.2M When You Need It</h3>
+              <p>Create useful drying space instantly, then retract the line neatly once the laundry is done.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="specs" id="specs">
+      <div class="container split">
+        <div class="media-card">
+          <img src="img6(1).jpg" alt="ARVIQUE retractable clothesline product specifications">
+        </div>
+
+        <div>
+          <div class="eyebrow">Product Specifications</div>
+          <h2 class="section-title">Made for modern spaces.</h2>
+          <p class="section-copy">A compact drying solution designed to blend into contemporary interiors while offering practical everyday functionality.</p>
+
+          <div class="spec-list">
+            <div class="spec-row"><span>Product</span><span>Retractable Clothesline</span></div>
+            <div class="spec-row"><span>Line Type</span><span>Single Rope</span></div>
+            <div class="spec-row"><span>Maximum Length</span><span>4.2 Meter / 13.8 Feet</span></div>
+            <div class="spec-row"><span>Wire</span><span>304 Stainless Steel</span></div>
+            <div class="spec-row"><span>Body</span><span>ABS + Aluminium</span></div>
+            <div class="spec-row"><span>Colour</span><span>Black</span></div>
+            <div class="spec-row"><span>Load Capacity</span><span>Up to 20 KG / 44 LB*</span></div>
+            <div class="spec-row"><span>Installation</span><span>Wall Mounted</span></div>
+          </div>
+
+          <p style="font-size:12px;color:var(--muted);margin-top:12px;">
+            *Load performance depends on correct installation and wall suitability.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container use-grid">
+        <div>
+          <div class="eyebrow">One Product. Multiple Spaces.</div>
+          <h2 class="section-title">Indoors or outdoors.</h2>
+          <p class="section-copy">Designed for modern homes where efficient use of space matters.</p>
+
+          <div class="use-pills">
+            <div>Bathroom</div>
+            <div>Balcony</div>
+            <div>Laundry / Utility Area</div>
+            <div>Indoor Drying Spaces</div>
+          </div>
+
+          <a href="https://www.amazon.in/dp/B0HDT9NF1F" target="_blank" rel="noopener" class="btn btn-primary">Buy Now — ₹1,099</a>
+        </div>
+
+        <div class="media-card">
+          <img src="img5(2).jpg" alt="ARVIQUE retractable clothesline for indoor and outdoor use">
+        </div>
+      </div>
+    </section>
+
+    <section class="dark">
+      <div class="container">
+        <div class="eyebrow">Everyday Capacity</div>
+        <h2 class="section-title">Built for real laundry loads.</h2>
+
+        <div class="showcase-grid">
+          <div class="showcase-card">
+            <img src="img10.jpg" alt="ARVIQUE clothesline supporting household laundry">
+            <div class="showcase-copy">
+              <h3>Designed for Real Laundry Loads</h3>
+              <p>Strong stainless steel wire gives you dependable drying capacity for everyday clothing and towels.</p>
+            </div>
+          </div>
+
+          <div class="showcase-card">
+            <img src="img8.jpg" alt="ARVIQUE retractable clothesline load capacity">
+            <div class="showcase-copy">
+              <h3>Designed for Up to 20 KG</h3>
+              <p>For secure performance, install the unit correctly on a suitable wall and follow the installation guidance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="support" id="support">
+      <div class="container support-grid">
+        <div>
+          <div class="eyebrow">ARVIQUE Care</div>
+          <h2 class="section-title">Support that continues after your purchase.</h2>
+          <p class="section-copy">
+            Installation assistance, product guidance and warranty support should be easy to access.
+            ARVIQUE Care is here to help you get the best from your product.
+          </p>
+        </div>
+
+        <div class="support-card">
+          <h3 style="font-size:28px;color:var(--navy);">Product Support</h3>
+          <div class="support-links">
+            <a href="#installation"><span>Installation Guide</span><span>→</span></a>
+            <a href="mailto:elarioglobal@gmail.com?subject=ARVIQUE%20Warranty%20Support"><span>Warranty Support</span><span>→</span></a>
+            <a href="mailto:elarioglobal@gmail.com?subject=ARVIQUE%20Product%20Support"><span>Email ARVIQUE Care</span><span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="installation">
+      <div class="container split">
+        <div>
+          <div class="eyebrow">Installation</div>
+          <h2 class="section-title">Simple wall-mounted setup.</h2>
+          <p class="section-copy">
+            Secure the main unit and opposite wall buckle, extend the stainless steel line and use the rotary switch to lock the line in place.
+          </p>
+          <div style="margin-top:26px;">
+            <a href="mailto:elarioglobal@gmail.com?subject=ARVIQUE%20Installation%20Help" class="btn btn-primary">Need Installation Help?</a>
+          </div>
+        </div>
+
+        <div class="media-card">
+          <img src="img7(1).jpg" alt="ARVIQUE retractable clothesline installation guide">
+        </div>
+      </div>
+    </section>
+
+    <section class="dark cta">
+      <div class="container cta-inner">
+        <div class="eyebrow">ARVIQUE</div>
+        <h2>Smarter drying starts here.</h2>
+        <p>Upgrade your balcony, bathroom or laundry space with a retractable drying solution designed for modern living.</p>
+        <a href="https://www.amazon.in/dp/B0HDT9NF1F" target="_blank" rel="noopener" class="btn btn-light">Buy on Amazon — ₹1,099</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <img src="ARVIQUE LOGO.png" alt="ARVIQUE Logo">
+          </div>
+          <p>Smart, thoughtfully designed essentials created to elevate everyday living.</p>
+        </div>
+
+        <div>
+          <h4>Explore</h4>
+          <a href="#shop">Shop</a>
+          <a href="#features">Features</a>
+          <a href="#specs">Specifications</a>
+          <a href="#installation">Installation</a>
+        </div>
+
+        <div>
+          <h4>Support</h4>
+          <a href="mailto:elarioglobal@gmail.com">elarioglobal@gmail.com</a>
+          <a href="https://www.amazon.in/dp/B0HDT9NF1F" target="_blank" rel="noopener">Amazon</a>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © 2026 ARVIQUE. All Rights Reserved. | Elario Global
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
