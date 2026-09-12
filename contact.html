@@ -177,6 +177,268 @@ footer a:hover{color:#fff!important}
   .hero{padding:40px 0 46px!important}
 }
 
+
+/* ===== ARVIQUE V14 FULL-SITE UTILITY POLISH ===== */
+:focus-visible{
+  outline:3px solid rgba(183,149,91,.55);
+  outline-offset:3px;
+  border-radius:8px;
+}
+.skip-link{
+  position:fixed;
+  left:16px;
+  top:-80px;
+  z-index:3000;
+  background:#fff;
+  color:var(--navy);
+  padding:10px 14px;
+  border-radius:10px;
+  box-shadow:0 10px 30px rgba(13,27,42,.18);
+  font-weight:800;
+  transition:top .2s ease;
+}
+.skip-link:focus{top:16px}
+.back-to-top{
+  position:fixed;
+  right:22px;
+  bottom:94px;
+  z-index:1200;
+  width:46px;
+  height:46px;
+  border:none;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#fff;
+  color:var(--navy);
+  box-shadow:0 12px 30px rgba(13,27,42,.16);
+  border:1px solid rgba(13,27,42,.09);
+  cursor:pointer;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px);
+  transition:opacity .2s ease,transform .2s ease,visibility .2s;
+  font-size:18px;
+  font-weight:900;
+}
+.back-to-top.is-visible{
+  opacity:1;
+  visibility:visible;
+  transform:none;
+}
+.back-to-top:hover{transform:translateY(-3px)}
+.site-page-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.site-page-kicker::before{
+  content:"";
+  width:22px;
+  height:1px;
+  background:var(--gold);
+}
+
+/* Consistent mobile drawer on root pages */
+.root-mobile-toggle{
+  display:none;
+  width:44px;height:44px;
+  border:1px solid rgba(13,27,42,.12);
+  border-radius:50%;
+  background:#fff;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  flex-direction:column;
+}
+.root-mobile-toggle span,
+.root-mobile-toggle::before,
+.root-mobile-toggle::after{
+  content:"";
+  display:block;
+  width:18px;height:2px;
+  background:var(--navy);
+  border-radius:999px;
+  transition:.25s ease;
+}
+.root-mobile-toggle span{margin:4px 0}
+.root-mobile-toggle.is-open::before{transform:translateY(6px) rotate(45deg)}
+.root-mobile-toggle.is-open span{opacity:0}
+.root-mobile-toggle.is-open::after{transform:translateY(-6px) rotate(-45deg)}
+
+.root-mobile-drawer{
+  position:fixed;
+  inset:0;
+  z-index:2100;
+  pointer-events:none;
+  display:none;
+}
+.root-mobile-drawer.is-open{pointer-events:auto}
+.root-mobile-backdrop{
+  position:absolute;inset:0;
+  background:rgba(8,19,30,.44);
+  opacity:0;
+  transition:opacity .25s ease;
+}
+.root-mobile-panel{
+  position:absolute;
+  top:0;right:0;bottom:0;
+  width:min(86vw,380px);
+  background:var(--cream);
+  padding:24px;
+  transform:translateX(100%);
+  transition:transform .3s cubic-bezier(.2,.7,.2,1);
+  box-shadow:-18px 0 50px rgba(13,27,42,.18);
+  overflow:auto;
+}
+.root-mobile-drawer.is-open .root-mobile-backdrop{opacity:1}
+.root-mobile-drawer.is-open .root-mobile-panel{transform:none}
+.root-mobile-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding-bottom:20px;
+  border-bottom:1px solid var(--line);
+}
+.root-mobile-head img{width:205px;max-width:72%}
+.root-mobile-close{
+  width:40px;height:40px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:#fff;
+  font-size:24px;
+  cursor:pointer;
+}
+.root-mobile-nav{
+  display:grid;
+  gap:10px;
+  padding:22px 0;
+}
+.root-mobile-nav a{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  min-height:50px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:0 15px;
+  color:var(--navy);
+  font-weight:800;
+}
+.root-mobile-nav a::after{content:"→";color:var(--gold)}
+.root-mobile-care{
+  background:var(--navy);
+  color:#fff;
+  padding:20px;
+  border-radius:18px;
+}
+.root-mobile-care p{color:#C3CBD2;font-size:13px;margin:8px 0 14px}
+.root-mobile-care a{color:#fff;font-weight:800;font-size:13px}
+
+@media(max-width:960px){
+  .root-mobile-toggle{display:flex}
+  .root-mobile-drawer{display:block}
+}
+@media(max-width:620px){
+  .back-to-top{right:16px;bottom:86px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    scroll-behavior:auto!important;
+    transition-duration:.001ms!important;
+    animation-duration:.001ms!important;
+    animation-iteration-count:1!important;
+  }
+}
+
+
+/* ===== CONTACT / SUPPORT FORM ===== */
+.contact-form-section{padding:24px 0 82px}
+.contact-layout{
+  display:grid;
+  grid-template-columns:.82fr 1.18fr;
+  gap:34px;
+  align-items:start;
+}
+.contact-side{
+  background:var(--navy);
+  color:#fff;
+  border-radius:26px;
+  padding:32px;
+  position:sticky;
+  top:118px;
+}
+.contact-side h2{font-size:32px;margin:10px 0}
+.contact-side p{color:#C4CCD3;font-size:14px}
+.contact-side-links{display:grid;gap:10px;margin-top:22px}
+.contact-side-links a{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 15px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:12px;
+  color:#fff;
+  font-weight:800;
+  font-size:13px;
+}
+.support-form{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:26px;
+  padding:30px;
+  box-shadow:0 18px 48px rgba(13,27,42,.06);
+}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:grid;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:13px;font-weight:800;color:var(--navy)}
+.field input,.field select,.field textarea{
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:13px 14px;
+  background:#fff;
+  color:var(--text);
+  font:inherit;
+  outline:none;
+  transition:border-color .2s ease,box-shadow .2s ease;
+}
+.field textarea{min-height:140px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(183,149,91,.12);
+}
+.form-note{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:14px;
+}
+.form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.form-status{
+  display:none;
+  margin-top:14px;
+  padding:12px 14px;
+  border-radius:12px;
+  background:var(--soft);
+  color:var(--navy);
+  font-size:13px;
+  font-weight:700;
+}
+.form-status.is-visible{display:block}
+@media(max-width:860px){
+  .contact-layout{grid-template-columns:1fr}
+  .contact-side{position:static}
+}
+@media(max-width:620px){
+  .form-grid{grid-template-columns:1fr}
+  .field.full{grid-column:auto}
+  .support-form{padding:22px}
+}
+
 </style>
 
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -223,6 +485,7 @@ footer a:hover{color:#fff!important}
 </script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <div class="announcement">Smart Living, Elevated • ARVIQUE Care Support • Warranty Registration Available</div>
 <header>
   <div class="container">
@@ -240,7 +503,7 @@ footer a:hover{color:#fff!important}
     </nav>
   </div>
 </header>
-<main>
+<main id="main-content">
 <section class="hero"><div class="container">
 <div class="eyebrow">ARVIQUE Care</div>
 <h1>Contact Us</h1>
@@ -315,6 +578,85 @@ footer a:hover{color:#fff!important}
 
 <div class="notice"><strong>Please note:</strong> Do not send passwords, payment-card details or other unnecessary sensitive financial information by email.</div>
 </article></div>
+
+<section class="contact-form-section">
+  <div class="container contact-layout">
+    <aside class="contact-side">
+      <div class="eyebrow">ARVIQUE Care</div>
+      <h2>Tell us what you need help with.</h2>
+      <p>Use the support form to prepare an email with your product and order details already organised.</p>
+      <div class="contact-side-links">
+        <a href="installation.html">Installation Guide <span>→</span></a>
+        <a href="warranty.html">Warranty Registration <span>→</span></a>
+        <a href="support.html">Support Centre <span>→</span></a>
+        <a href="mailto:elarioglobal@gmail.com">Email Directly <span>→</span></a>
+      </div>
+    </aside>
+
+    <form class="support-form" id="arviqueSupportForm">
+      <div class="eyebrow">Contact Support</div>
+      <h2 class="section-title" style="font-size:36px;">Create your support request.</h2>
+      <p class="section-copy" style="font-size:15px;margin-bottom:24px;">
+        Fill in the details below. On submit, your email application will open with the information pre-filled for ARVIQUE Care.
+      </p>
+
+      <div class="form-grid">
+        <div class="field">
+          <label for="supportName">Name *</label>
+          <input id="supportName" name="name" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="supportEmail">Email *</label>
+          <input id="supportEmail" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="supportPhone">Phone</label>
+          <input id="supportPhone" name="phone" inputmode="tel" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="supportOrder">Amazon Order ID</label>
+          <input id="supportOrder" name="order" placeholder="Optional">
+        </div>
+        <div class="field">
+          <label for="supportProduct">Product</label>
+          <select id="supportProduct" name="product">
+            <option value="Not specified">Select product</option>
+            <option>4.2M Single Rope — Black</option>
+            <option>4.2M Double Rope — White</option>
+            <option>4.2M Single Rope — White</option>
+            <option>5.2M Single Rope — White</option>
+            <option>5.2M Double Rope — White</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="supportTopic">Support Type *</label>
+          <select id="supportTopic" name="topic" required>
+            <option value="">Choose a topic</option>
+            <option>Installation Help</option>
+            <option>Product Guidance</option>
+            <option>Warranty Support</option>
+            <option>Order / Purchase Query</option>
+            <option>General Enquiry</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="supportMessage">How can we help? *</label>
+          <textarea id="supportMessage" name="message" required placeholder="Describe the issue or question clearly."></textarea>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit">Prepare Email to ARVIQUE Care</button>
+        <button class="btn btn-outline" type="button" id="copySupportRequest">Copy Request</button>
+      </div>
+      <p class="form-note">
+        This website is hosted as a static site, so the form opens your email application rather than sending the message silently in the background.
+      </p>
+      <div class="form-status" id="supportFormStatus" role="status"></div>
+    </form>
+  </div>
+</section>
+
 </main>
 
 <footer>
@@ -345,4 +687,96 @@ footer a:hover{color:#fff!important}
     <div class="copyright">© 2026 ARVIQUE. All Rights Reserved. | Elario Global</div>
   </div>
 </footer>
+<button class="back-to-top" aria-label="Back to top">↑</button>
+
+<script>
+(() => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const topBtn = document.querySelector('.back-to-top');
+  if (topBtn) {
+    const sync = () => topBtn.classList.toggle('is-visible', window.scrollY > 650);
+    window.addEventListener('scroll', sync, {passive:true});
+    sync();
+    topBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:reduceMotion?'auto':'smooth'}));
+  }
+
+  const toggle = document.querySelector('.root-mobile-toggle');
+  const drawer = document.querySelector('.root-mobile-drawer');
+  const backdrop = document.querySelector('.root-mobile-backdrop');
+  const close = document.querySelector('.root-mobile-close');
+
+  const setDrawer = open => {
+    if (!toggle || !drawer) return;
+    toggle.classList.toggle('is-open', open);
+    drawer.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    drawer.setAttribute('aria-hidden', String(!open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+
+  toggle?.addEventListener('click', () => setDrawer(!drawer.classList.contains('is-open')));
+  close?.addEventListener('click', () => setDrawer(false));
+  backdrop?.addEventListener('click', () => setDrawer(false));
+  drawer?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setDrawer(false)));
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') setDrawer(false);
+  });
+})();
+</script>
+
+
+<script>
+(() => {
+  const form = document.getElementById('arviqueSupportForm');
+  const copyBtn = document.getElementById('copySupportRequest');
+  const status = document.getElementById('supportFormStatus');
+  if (!form) return;
+
+  const build = () => {
+    const data = new FormData(form);
+    const topic = data.get('topic') || 'General Enquiry';
+    const subject = `ARVIQUE Support — ${topic}`;
+    const body = [
+      'ARVIQUE Care Support Request',
+      '',
+      `Name: ${data.get('name') || ''}`,
+      `Email: ${data.get('email') || ''}`,
+      `Phone: ${data.get('phone') || 'Not provided'}`,
+      `Amazon Order ID: ${data.get('order') || 'Not provided'}`,
+      `Product: ${data.get('product') || 'Not specified'}`,
+      `Support Type: ${topic}`,
+      '',
+      'Message:',
+      data.get('message') || ''
+    ].join('\n');
+    return {subject, body};
+  };
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    const {subject, body} = build();
+    const url = `mailto:elarioglobal@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    status.textContent = 'Your email application is opening with the support request pre-filled.';
+    status.classList.add('is-visible');
+    window.location.href = url;
+  });
+
+  copyBtn?.addEventListener('click', async () => {
+    if (!form.reportValidity()) return;
+    const {subject, body} = build();
+    const full = `${subject}\n\n${body}`;
+    try {
+      await navigator.clipboard.writeText(full);
+      status.textContent = 'Support request copied. You can paste it into email or WhatsApp.';
+    } catch {
+      status.textContent = 'Copy was blocked by the browser. Please select the form details manually.';
+    }
+    status.classList.add('is-visible');
+  });
+})();
+</script>
+
 </body></html>
