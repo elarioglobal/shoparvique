@@ -127,12 +127,12 @@ section{padding:84px 0}
     linear-gradient(180deg,#FAF8F3 0%,#F8F6F1 100%);
 }
 .hero{
-  min-height:76vh;
+  min-height:auto;
   display:grid;
   grid-template-columns:1.05fr .95fr;
   align-items:center;
   gap:64px;
-  padding:74px 0 62px;
+  padding:38px 0 56px;
 }
 .hero h1{
   color:var(--navy);
@@ -435,7 +435,7 @@ footer a:hover{color:#fff}
     width:198px;
     max-height:54px;
   }
-  .hero{padding:50px 0}
+  .hero{padding:30px 0 44px}
   .hero h1{font-size:44px}
   .hero-actions{flex-direction:column}
   .hero-actions .btn{width:100%}
@@ -450,7 +450,7 @@ footer a:hover{color:#fff}
 
 @media print{
   header{position:static}
-  .hero{min-height:auto;padding:42px 0}
+  .hero{min-height:auto;padding:30px 0}
   section{break-inside:avoid-page}
   .product-card,.support-card,.feature-card,.hero-card{break-inside:avoid}
 }
