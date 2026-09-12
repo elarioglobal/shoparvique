@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ARVIQUE Care | Support, Warranty & Installation Help</title>
+<meta name="description" content="ARVIQUE Care support for warranty registration, installation help, product guidance, FAQs and customer assistance.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#0D1B2A;
+  --navy2:#14283B;
+  --gold:#B7955B;
+  --cream:#F8F6F1;
+  --warm:#EEE9DF;
+  --white:#fff;
+  --text:#17212B;
+  --muted:#6D747B;
+  --line:#E6E1D7;
+  --soft:#F3F0E9;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--text);line-height:1.65}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+h1,h2,h3,h4{font-family:"Manrope",sans-serif;line-height:1.1}
+.container{width:min(1180px,90%);margin:auto}
+
+.announcement{background:var(--navy);color:#fff;text-align:center;padding:10px 16px;font-size:13px}
+
+header{position:sticky;top:0;z-index:1000;background:rgba(248,246,241,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(13,27,42,.08)}
+nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.logo img{height:58px;width:auto}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:14px;font-weight:600}
+.nav-links a:hover{color:var(--gold)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:700;font-size:14px;transition:.25s;border:1px solid transparent}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-primary:hover{background:var(--navy2);transform:translateY(-2px)}
+.btn-outline{border-color:var(--navy);color:var(--navy)}
+.btn-outline:hover{background:var(--navy);color:#fff}
+.btn-light{background:#fff;color:var(--navy)}
+
+section{padding:88px 0}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:2.1px;font-size:12px;font-weight:800;margin-bottom:16px}
+.section-title{color:var(--navy);font-size:clamp(36px,4.5vw,58px);margin-bottom:18px}
+.section-copy{color:var(--muted);font-size:17px;max-width:760px}
+
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:68px;align-items:center;min-height:68vh;padding:72px 0}
+.hero h1{font-size:clamp(50px,6vw,78px);color:var(--navy);margin-bottom:22px}
+.hero p{font-size:18px;color:var(--muted);max-width:660px;margin-bottom:28px}
+
+.hero-card{background:var(--navy);color:#fff;border-radius:30px;padding:38px;box-shadow:0 24px 60px rgba(13,27,42,.14)}
+.hero-card h3{font-size:28px;margin-bottom:12px}
+.hero-card p{color:#BBC4CC;font-size:15px;margin-bottom:0}
+.hero-links{display:grid;gap:12px;margin-top:24px}
+.hero-links a{display:flex;align-items:center;justify-content:space-between;background:#14283B;border:1px solid rgba(255,255,255,.08);padding:16px 18px;border-radius:14px;font-weight:700;font-size:14px}
+.hero-links a:hover{background:#1a334b}
+
+.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:38px}
+.quick-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px}
+.quick-card .num{font-size:12px;font-weight:800;color:var(--gold);margin-bottom:24px}
+.quick-card h3{font-size:20px;color:var(--navy);margin-bottom:8px}
+.quick-card p{font-size:14px;color:var(--muted);margin-bottom:18px}
+.quick-card a{font-size:14px;font-weight:800;color:var(--navy)}
+
+.dark{background:var(--navy);color:#fff}
+.dark .section-title{color:#fff}
+.dark .section-copy{color:#BBC4CC}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+.step{background:#14283B;border-radius:22px;padding:30px}
+.step .step-no{color:var(--gold);font-weight:800;font-size:12px;margin-bottom:20px}
+.step h3{font-size:21px;margin-bottom:10px}
+.step p{color:#BBC4CC;font-size:14px}
+
+.faq-wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:64px;align-items:start}
+.faq-list{display:grid;gap:12px}
+details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:0 20px}
+summary{cursor:pointer;list-style:none;font-weight:700;color:var(--navy);padding:18px 0}
+summary::-webkit-details-marker{display:none}
+details p{color:var(--muted);font-size:14px;padding:0 0 18px}
+
+.contact{background:var(--warm)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.contact-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:32px}
+.contact-card h3{font-size:24px;color:var(--navy);margin-bottom:10px}
+.contact-card p{color:var(--muted);font-size:14px;margin-bottom:22px}
+.contact-list{display:grid;gap:12px}
+.contact-list a{display:flex;justify-content:space-between;gap:18px;padding:15px 17px;border:1px solid var(--line);border-radius:12px;font-weight:700;font-size:14px}
+.note{margin-top:18px;font-size:13px;color:var(--muted)}
+
+footer{background:#08131E;color:#fff;padding:64px 0 28px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:50px;margin-bottom:42px}
+.footer-logo img{height:70px;width:auto;background:#fff;border-radius:10px;padding:6px 10px;margin-bottom:16px}
+footer p,footer a{color:#A7B0B8;font-size:14px}
+footer h4{margin-bottom:14px}
+footer a{display:block;margin:8px 0}
+.copyright{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;font-size:13px;color:#7E8993}
+
+@media(max-width:900px){
+  .nav-links a:not(.btn){display:none}
+  .hero,.faq-wrap,.contact-grid{grid-template-columns:1fr}
+  .quick-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  section{padding:64px 0}
+  .logo img{height:46px}
+  .hero{padding:50px 0}
+  .hero h1{font-size:46px}
+  .quick-grid,.footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<div class="announcement">
+ARVIQUE Care • Warranty, Installation & Product Support
+</div>
+
+<header>
+<div class="container">
+<nav>
+<a class="logo" href="index.html"><img src="assets/arvique-logo.jpeg" alt="ARVIQUE Logo"></a>
+<div class="nav-links">
+<a href="index.html#shop">Shop</a>
+<a href="about.html">About</a>
+<a href="index.html#why">Why ARVIQUE</a>
+<a href="support.html">Support</a>
+<a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdZ5jYbZd840u1UPojtkgNLyEBclXGgsQ8lZutkg_qkp1xWjw/viewform?usp=dialog" target="_blank" rel="noopener">Register Warranty</a>
+</div>
+</nav>
+</div>
+</header>
+
+<main>
+
+<section>
+<div class="container hero">
+<div>
+<div class="eyebrow">ARVIQUE Care</div>
+<h1>Support that continues after purchase.</h1>
+<p>
+Whether you need help registering your warranty, understanding your product,
+or getting installation guidance, ARVIQUE Care is here to make the process simpler.
+</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdZ5jYbZd840u1UPojtkgNLyEBclXGgsQ8lZutkg_qkp1xWjw/viewform?usp=dialog" target="_blank" rel="noopener" class="btn btn-primary">Register Your Warranty</a>
+<a href="mailto:elarioglobal@gmail.com?subject=ARVIQUE%20Customer%20Support" class="btn btn-outline">Contact Support</a>
+</div>
+</div>
+
+<div class="hero-card">
+<div class="eyebrow">Quick Support</div>
+<h3>What do you need help with?</h3>
+<p>Choose a support option below and we’ll point you in the right direction.</p>
+
+<div class="hero-links">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdZ5jYbZd840u1UPojtkgNLyEBclXGgsQ8lZutkg_qkp1xWjw/viewform?usp=dialog" target="_blank" rel="noopener"><span>Warranty Registration</span><span>→</span></a>
+<a href="mailto:elarioglobal@gmail.com?subject=ARVIQUE%20Installation%20Help"><span>Installation Help</span><span>→</span></a>
+<a href="mailto:elarioglobal@gmail.com?subject=ARVIQUE%20Product%20Guidance"><span>Product Guidance</span><span>→</span></a>
+<a href="mailto:elarioglobal@gmail.com?subject=ARVIQUE%20Order%20Support"><span>Order Support</span><span>→</span></a>
+</div>
+</div>
+</div>
+</section>
+
+<section style="background:#fff;">
+<div class="container">
+<div class="eyebrow">Support Options</div>
+<h2 class="section-title">Help for every stage of ownership.</h2>
+<p class="section-copy">
+From setup to ongoing product support, ARVIQUE Care is designed to give customers a clear place to go whenever assistance is needed.
+</p>
+
+<div class="quick-grid">
+<div class="quick-card">
+<div class="num">01</div>
+<h3>Register Warranty</h3>
+<p>Complete your ARVIQUE warranty registration online using our customer form.</p>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdZ5jYbZd840u1UPojtkgNLyEBclXGgsQ8lZutkg_qkp1xWjw/viewform?usp=dialog" target="_blank" rel="noopener">Register now →</a>
+</div>
+
+<div class="quick-card">
+<div class="num">02</div>
+<h3>Installation Help</h3>
+<p>Need help understanding mounting, setup or product operation? Contact ARVIQUE Care.</p>
+<a href="mailto:elarioglobal@gmail.com?subject=ARVIQUE%20Installation%20Help">Get installation help →</a>
+</div>
+
+<div class="quick-card">
+<div class="num">03</div>
+<h3>Product Guidance</h3>
+<p>Questions about your ARVIQUE product, mechanism or everyday use can be sent directly to us.</p>
+<a href="mailto:elarioglobal@gmail.com?subject=ARVIQUE%20Product%20Guidance">Ask ARVIQUE Care →</a>
+</div>
+
+<div class="quick-card">
+<div class="num">04</div>
+<h3>Order Assistance</h3>
+<p>For order, delivery or purchase-platform related issues, keep your order details handy when contacting us.</p>
+<a href="mailto:elarioglobal@gmail.com?subject=ARVIQUE%20Order%20Assistance">Contact us →</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="dark">
+<div class="container">
+<div class="eyebrow">Warranty Registration</div>
+<h2 class="section-title">Three simple steps.</h2>
+<p class="section-copy">Keep your purchase details available before beginning your ARVIQUE warranty registration.</p>
+
+<div class="steps">
+<div class="step">
+<div class="step-no">STEP 01</div>
+<h3>Open the form</h3>
+<p>Use the ARVIQUE warranty registration form from this website or your product insert.</p>
+</div>
+
+<div class="step">
+<div class="step-no">STEP 02</div>
+<h3>Enter your details</h3>
+<p>Provide the requested customer and product information accurately so your registration can be recorded correctly.</p>
+</div>
+
+<div class="step">
+<div class="step-no">STEP 03</div>
+<h3>Submit your registration</h3>
+<p>Review your information before submitting the form and keep your purchase details available for future support.</p>
+</div>
+</div>
+
+<div style="margin-top:30px">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdZ5jYbZd840u1UPojtkgNLyEBclXGgsQ8lZutkg_qkp1xWjw/viewform?usp=dialog" target="_blank" rel="noopener" class="btn btn-light">Register Your Warranty</a>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container faq-wrap">
+
+<div>
+<div class="eyebrow">Frequently Asked Questions</div>
+<h2 class="section-title">Common questions, answered.</h2>
+<p class="section-copy">
+For product-specific questions not covered here, contact ARVIQUE Care directly.
+</p>
+</div>
+
+<div class="faq-list">
+
+<details open>
+<summary>Where can I register my ARVIQUE warranty?</summary>
+<p>You can register your warranty using the official ARVIQUE warranty form linked throughout this support page.</p>
+</details>
+
+<details>
+<summary>I need help installing my product. What should I do?</summary>
+<p>Email ARVIQUE Care with your product name and a short description of the installation issue. Photos can also help explain the situation clearly.</p>
+</details>
+
+<details>
+<summary>What information should I include when contacting support?</summary>
+<p>Include your product name, purchase/order details where relevant, and a clear description of the issue or question so the support request can be understood quickly.</p>
+</details>
+
+<details>
+<summary>I purchased through Amazon. Where should I go for order or delivery issues?</summary>
+<p>For marketplace order, payment, delivery or return-process issues, Amazon may also need to assist because the order was placed through its platform. ARVIQUE Care can still help with product-related questions.</p>
+</details>
+
+<details>
+<summary>Can I contact ARVIQUE for product-use questions after purchase?</summary>
+<p>Yes. ARVIQUE Care is available for installation guidance, product-use questions and warranty-related support.</p>
+</details>
+
+</div>
+</div>
+</section>
+
+<section class="contact">
+<div class="container contact-grid">
+
+<div>
+<div class="eyebrow">Contact ARVIQUE Care</div>
+<h2 class="section-title">Need more help?</h2>
+<p class="section-copy">
+Send us the details of your query and our support channel can assist with product, installation and warranty-related questions.
+</p>
+</div>
+
+<div class="contact-card">
+<h3>Customer Support</h3>
+<p>Choose the option that best matches your query.</p>
+
+<div class="contact-list">
+<a href="mailto:elarioglobal@gmail.com?subject=ARVIQUE%20Installation%20Help"><span>Installation Help</span><span>→</span></a>
+<a href="mailto:elarioglobal@gmail.com?subject=ARVIQUE%20Warranty%20Support"><span>Warranty Support</span><span>→</span></a>
+<a href="mailto:elarioglobal@gmail.com?subject=ARVIQUE%20Product%20Guidance"><span>Product Guidance</span><span>→</span></a>
+<a href="mailto:elarioglobal@gmail.com"><span>elarioglobal@gmail.com</span><span>→</span></a>
+</div>
+
+<p class="note">When contacting support, include the product name and relevant purchase details wherever possible.</p>
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container">
+<div class="footer-grid">
+
+<div>
+<div class="footer-logo"><img src="assets/arvique-logo.jpeg" alt="ARVIQUE Logo"></div>
+<p>Smart, thoughtfully designed essentials created to elevate everyday living.</p>
+</div>
+
+<div>
+<h4>Explore</h4>
+<a href="index.html">Home</a>
+<a href="index.html#shop">Shop</a>
+<a href="about.html">About ARVIQUE</a>
+<a href="index.html#why">Why ARVIQUE</a>
+</div>
+
+<div>
+<h4>Support</h4>
+<a href="support.html">ARVIQUE Care</a>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdZ5jYbZd840u1UPojtkgNLyEBclXGgsQ8lZutkg_qkp1xWjw/viewform?usp=dialog" target="_blank" rel="noopener">Register Warranty</a>
+<a href="mailto:elarioglobal@gmail.com">elarioglobal@gmail.com</a>
+</div>
+
+</div>
+
+<div class="copyright">© 2026 ARVIQUE. All Rights Reserved. | Elario Global</div>
+</div>
+</footer>
+
+</body>
+</html>
