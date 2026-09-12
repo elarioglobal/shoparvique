@@ -993,6 +993,27 @@ footer a:hover{color:#fff}
   .mobile-drawer-panel,.mobile-drawer-backdrop,.care-popover,.care-fab{transition:none!important}
 }
 
+
+/* ===== ARVIQUE VIDEO GUIDES ===== */
+.video-guides{background:#fff}
+.video-guides-head{max-width:780px;margin-bottom:34px}
+.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.video-card{
+  background:var(--cream);border:1px solid var(--line);border-radius:26px;overflow:hidden;
+  box-shadow:0 16px 42px rgba(13,27,42,.06)
+}
+.video-frame{position:relative;aspect-ratio:16/9;background:#08131E;overflow:hidden}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-copy{padding:24px}
+.video-copy .video-tag{
+  color:var(--gold);text-transform:uppercase;letter-spacing:1.8px;font-size:11px;
+  font-weight:900;margin-bottom:10px
+}
+.video-copy h3{color:var(--navy);font-size:24px;margin-bottom:9px}
+.video-copy p{color:var(--muted);font-size:14px;line-height:1.7}
+.video-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+@media(max-width:820px){.video-grid{grid-template-columns:1fr}}
+
 </style>
 
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -1077,7 +1098,7 @@ footer a:hover{color:#fff}
 <div class="nav-links">
         <a href="#shop" data-section-link="shop">Shop</a>
         <a href="about.html">About</a>
-        <a href="#compare" data-section-link="compare">Compare</a><a href="#faq" data-section-link="faq">FAQ</a><a href="#why" data-section-link="why">Why ARVIQUE</a>
+        <a href="#video-guides" data-section-link="video-guides">Videos</a><a href="#compare" data-section-link="compare">Compare</a><a href="#faq" data-section-link="faq">FAQ</a><a href="#why" data-section-link="why">Why ARVIQUE</a>
         <a href="support.html">Support</a>
         <a class="btn btn-primary" href="#shop">Explore Products</a>
       </div>
@@ -1095,7 +1116,7 @@ footer a:hover{color:#fff}
 
     <nav class="mobile-drawer-nav">
       <a href="#shop">Shop</a>
-      <a href="#compare">Compare</a>
+      <a href="#video-guides">Video Guides</a><a href="#compare">Compare</a>
       <a href="#faq">FAQ</a>
       <a href="#why">Why ARVIQUE</a>
       <a href="about.html">About</a>
@@ -1451,6 +1472,60 @@ footer a:hover{color:#fff}
 
 
 
+
+<section class="video-guides" id="video-guides">
+  <div class="container">
+    <div class="video-guides-head reveal">
+      <div class="eyebrow">ARVIQUE Video Guides</div>
+      <h2 class="section-title motion-accent">See the product. Learn the setup.</h2>
+      <p class="section-copy">
+        Watch the ARVIQUE product overview and installation guide whenever you need a quick visual walkthrough.
+      </p>
+    </div>
+
+    <div class="video-grid">
+      <article class="video-card reveal">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/ngnmldL0nVE"
+            title="ARVIQUE Product Overview Video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-copy">
+          <div class="video-tag">Product Overview</div>
+          <h3>Meet the ARVIQUE retractable clothesline.</h3>
+          <p>Get a visual overview of the product, its design and everyday use before or after purchase.</p>
+          <div class="video-actions">
+            <a class="btn btn-primary" href="https://www.youtube.com/watch?v=ngnmldL0nVE" target="_blank" rel="noopener">Watch on YouTube</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="video-card reveal reveal-delay-1">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/jumVK8ZQxtY"
+            title="ARVIQUE Installation Video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-copy">
+          <div class="video-tag">Installation Guide</div>
+          <h3>Follow the installation visually.</h3>
+          <p>Use the video as a convenient visual reference alongside the instructions supplied with your ARVIQUE product.</p>
+          <div class="video-actions">
+            <a class="btn btn-primary" href="https://www.youtube.com/watch?v=jumVK8ZQxtY" target="_blank" rel="noopener">Watch Installation</a>
+            <a class="btn btn-outline" href="support.html">Need Help?</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section class="compare-section" id="compare">
   <div class="container">
     <div class="compare-head reveal">
@@ -1635,6 +1710,7 @@ footer a:hover{color:#fff}
     <h3>How can we help?</h3>
     <p>Quick access to product support, warranty registration and contact options.</p>
     <div class="care-actions">
+      <a class="care-action" href="#video-guides">Video Guides <span>→</span></a>
       <a class="care-action" href="support.html">Product Support <span>→</span></a>
       <a class="care-action" href="warranty.html">Register Warranty <span>→</span></a>
       <a class="care-action" href="contact.html">Contact ARVIQUE <span>→</span></a>
