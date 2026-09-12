@@ -659,6 +659,144 @@ footer a:hover{color:#fff}
   .js .reveal{opacity:1!important;transform:none!important}
 }
 
+
+/* ===== PRODUCT COMPARISON + FAQ ===== */
+.compare-section{background:#fff}
+.compare-head{max-width:760px;margin-bottom:34px}
+.compare-shell{
+  border:1px solid var(--line);
+  border-radius:28px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 18px 52px rgba(13,27,42,.06);
+}
+.compare-grid{
+  display:grid;
+  grid-template-columns:1.05fr repeat(4,1fr);
+}
+.compare-cell{
+  padding:20px 18px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  min-height:74px;
+  display:flex;
+  align-items:center;
+}
+.compare-grid .compare-cell:nth-child(5n){border-right:none}
+.compare-grid .compare-cell:nth-last-child(-n+5){border-bottom:none}
+.compare-label{
+  background:var(--soft);
+  color:var(--navy);
+  font-weight:800;
+}
+.compare-product{
+  align-items:flex-start;
+  flex-direction:column;
+  gap:8px;
+}
+.compare-product strong{
+  color:var(--navy);
+  font-size:15px;
+}
+.compare-product span{
+  color:var(--muted);
+  font-size:12px;
+}
+.compare-value{
+  color:var(--text);
+  font-size:14px;
+  font-weight:700;
+}
+.compare-best{
+  color:var(--gold);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+}
+.compare-actions{
+  margin-top:26px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.faq-section{background:var(--soft)}
+.faq-wrap{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:64px;
+  align-items:start;
+}
+.faq-list{
+  display:grid;
+  gap:14px;
+}
+.faq-item{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+  transition:border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.faq-item[open]{
+  border-color:rgba(183,149,91,.42);
+  box-shadow:0 12px 30px rgba(13,27,42,.06);
+}
+.faq-question{
+  list-style:none;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  padding:21px 22px;
+  color:var(--navy);
+  font-weight:800;
+  font-size:15px;
+}
+.faq-question::-webkit-details-marker{display:none}
+.faq-icon{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background:var(--soft);
+  display:grid;
+  place-items:center;
+  flex:none;
+  transition:transform .25s ease, background .25s ease;
+}
+.faq-item[open] .faq-icon{
+  transform:rotate(45deg);
+  background:var(--warm);
+}
+.faq-answer{
+  padding:0 22px 22px;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.75;
+}
+.faq-note{
+  margin-top:28px;
+  padding:24px;
+  border-radius:20px;
+  background:var(--navy);
+  color:#fff;
+}
+.faq-note p{color:#C2CAD1;font-size:14px;margin:10px 0 18px}
+
+@media(max-width:980px){
+  .compare-shell{overflow-x:auto}
+  .compare-grid{min-width:860px}
+  .faq-wrap{grid-template-columns:1fr;gap:34px}
+}
+@media(max-width:620px){
+  .compare-actions{flex-direction:column}
+  .compare-actions .btn{width:100%}
+  .faq-question{padding:18px;font-size:14px}
+  .faq-answer{padding:0 18px 18px}
+}
+
 </style>
 
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -742,7 +880,7 @@ footer a:hover{color:#fff}
       <div class="nav-links">
         <a href="#shop" data-section-link="shop">Shop</a>
         <a href="about.html">About</a>
-        <a href="#why" data-section-link="why">Why ARVIQUE</a>
+        <a href="#compare" data-section-link="compare">Compare</a><a href="#faq" data-section-link="faq">FAQ</a><a href="#why" data-section-link="why">Why ARVIQUE</a>
         <a href="support.html">Support</a>
         <a class="btn btn-primary" href="#shop">Explore Products</a>
       </div>
@@ -1083,6 +1221,138 @@ footer a:hover{color:#fff}
 </section>
 
 
+
+<section class="compare-section" id="compare">
+  <div class="container">
+    <div class="compare-head reveal">
+      <div class="eyebrow">Find Your Fit</div>
+      <h2 class="section-title motion-accent">Which ARVIQUE clothesline is right for you?</h2>
+      <p class="section-copy">
+        Compare the current ARVIQUE retractable clothesline range by rope type, reach and finish.
+      </p>
+    </div>
+
+    <div class="compare-shell reveal">
+      <div class="compare-grid" role="table" aria-label="ARVIQUE clothesline comparison">
+        <div class="compare-cell compare-label">Model</div>
+        <div class="compare-cell compare-product"><strong>4.2M Single</strong><span>Black</span><span class="compare-best">Compact Pick</span></div>
+        <div class="compare-cell compare-product"><strong>4.2M Double</strong><span>White</span><span class="compare-best">More Drying Space</span></div>
+        <div class="compare-cell compare-product"><strong>5.2M Single</strong><span>White</span><span class="compare-best">Longer Reach</span></div>
+        <div class="compare-cell compare-product"><strong>5.2M Double</strong><span>White</span><span class="compare-best">Maximum Capacity</span></div>
+
+        <div class="compare-cell compare-label">Rope Type</div>
+        <div class="compare-cell compare-value">Single Rope</div>
+        <div class="compare-cell compare-value">Double Rope</div>
+        <div class="compare-cell compare-value">Single Rope</div>
+        <div class="compare-cell compare-value">Double Rope</div>
+
+        <div class="compare-cell compare-label">Maximum Reach</div>
+        <div class="compare-cell compare-value">4.2 Meter</div>
+        <div class="compare-cell compare-value">4.2 Meter</div>
+        <div class="compare-cell compare-value">5.2 Meter</div>
+        <div class="compare-cell compare-value">5.2 Meter</div>
+
+        <div class="compare-cell compare-label">Best For</div>
+        <div class="compare-cell compare-value">Compact balconies & bathrooms</div>
+        <div class="compare-cell compare-value">More hanging space in everyday areas</div>
+        <div class="compare-cell compare-value">Longer wall-to-wall spans</div>
+        <div class="compare-cell compare-value">Larger drying requirements</div>
+
+        <div class="compare-cell compare-label">Current Price</div>
+        <div class="compare-cell compare-value">₹1,099</div>
+        <div class="compare-cell compare-value">₹1,259</div>
+        <div class="compare-cell compare-value">₹1,459</div>
+        <div class="compare-cell compare-value">₹2,999</div>
+      </div>
+    </div>
+
+    <div class="compare-actions reveal">
+      <a href="#shop" class="btn btn-primary">View All Products</a>
+      <a href="support.html" class="btn btn-outline">Need Product Guidance?</a>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <div class="container faq-wrap">
+    <div class="reveal reveal-left">
+      <div class="eyebrow">Frequently Asked Questions</div>
+      <h2 class="section-title motion-accent">A few things customers usually want to know.</h2>
+      <p class="section-copy">
+        Quick answers about choosing, installing and using an ARVIQUE retractable clothesline.
+      </p>
+
+      <div class="faq-note">
+        <strong>Still need help?</strong>
+        <p>ARVIQUE Care can help with product guidance, installation questions and warranty support.</p>
+        <a href="support.html" class="btn" style="background:#fff;color:var(--navy);">Visit ARVIQUE Care</a>
+      </div>
+    </div>
+
+    <div class="faq-list reveal reveal-right">
+      <details class="faq-item">
+        <summary class="faq-question">
+          What is the difference between Single Rope and Double Rope?
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-answer">
+          Single Rope models provide one retractable drying line and suit compact spaces. Double Rope models provide two parallel drying lines, giving you more hanging space within one wall-mounted system.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          Should I choose 4.2M or 5.2M?
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-answer">
+          Choose according to the wall-to-wall distance you need to cover. The 4.2M models are suited to shorter spans, while the 5.2M models provide additional reach for larger spaces.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          Where can an ARVIQUE retractable clothesline be used?
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-answer">
+          Depending on the model and installation surface, ARVIQUE retractable clotheslines are designed for spaces such as balconies, bathrooms, laundry areas, utility spaces and other suitable indoor or outdoor locations.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          Does the clothesline stay visible when I am not using it?
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-answer">
+          The line retracts back into the wall-mounted housing after use, helping keep the space open and visually uncluttered.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          Do all ARVIQUE models have the same installation method?
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-answer">
+          No. Installation details can vary by model and wall surface. Always follow the instructions supplied with your specific product and review the relevant product page before installation.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">
+          How do I register my product warranty?
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-answer">
+          Use the warranty registration page on the ARVIQUE website and submit the requested purchase and product information. You can also reach ARVIQUE Care if you need assistance.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section class="support" id="support">
   <div class="container support-grid reveal">
 
@@ -1274,6 +1544,21 @@ footer a:hover{color:#fff}
     }, { threshold: 0.08 });
     ctaObserver.observe(shop);
   }
+})();
+</script>
+
+
+<script>
+(() => {
+  const items = [...document.querySelectorAll('.faq-item')];
+  items.forEach(item => {
+    item.addEventListener('toggle', () => {
+      if (!item.open) return;
+      items.forEach(other => {
+        if (other !== item) other.removeAttribute('open');
+      });
+    });
+  });
 })();
 </script>
 
