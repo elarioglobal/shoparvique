@@ -53,13 +53,24 @@ header{
   border-bottom:1px solid rgba(13,27,42,.08);
 }
 nav{
-  min-height:78px;
+  min-height:86px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:28px;
+  gap:22px;
 }
-.logo img{height:66px;width:auto}
+.logo{
+  display:flex;
+  align-items:center;
+  flex-shrink:0;
+}
+.logo img{
+  width:300px;
+  height:auto;
+  max-height:68px;
+  object-fit:contain;
+  display:block;
+}
 .nav-links{display:flex;align-items:center;gap:26px}
 .nav-links a{font-size:14px;font-weight:700}
 .nav-links a:hover{color:var(--gold)}
@@ -404,6 +415,11 @@ footer a:hover{color:#fff}
 }
 
 @media(max-width:960px){
+
+  .logo img{
+    width:235px;
+    max-height:60px;
+  }
   .nav-links a:not(.btn){display:none}
   .products-grid{grid-template-columns:1fr 1fr}
   .product-card,.product-card:nth-child(4),.product-card:nth-child(5){grid-column:auto}
@@ -413,8 +429,11 @@ footer a:hover{color:#fff}
 }
 @media(max-width:620px){
   section{padding:64px 0}
-  nav{min-height:72px}
-  .logo img{height:52px}
+  nav{min-height:70px;gap:12px}
+  .logo img{
+    width:185px;
+    max-height:50px;
+  }
   .hero{padding:50px 0}
   .hero h1{font-size:44px}
   .hero-actions{flex-direction:column}
@@ -511,8 +530,8 @@ footer a:hover{color:#fff}
 <header>
   <div class="container">
     <nav>
-      <a class="logo" href="index.html">
-        <img src="assets/arvique-logo.jpeg" alt="ARVIQUE Logo">
+      <a class="logo" href="index.html" aria-label="ARVIQUE Home">
+        <img src="assets/arvique-header-logo.png" alt="ARVIQUE — Smart Living, Elevated">
       </a>
 
       <div class="nav-links">
