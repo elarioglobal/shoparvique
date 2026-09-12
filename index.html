@@ -59,7 +59,7 @@ nav{
   justify-content:space-between;
   gap:28px;
 }
-.logo img{height:54px;width:auto}
+.logo img{height:66px;width:auto}
 .nav-links{display:flex;align-items:center;gap:26px}
 .nav-links a{font-size:14px;font-weight:700}
 .nav-links a:hover{color:var(--gold)}
@@ -226,11 +226,10 @@ section{padding:84px 0}
   color:var(--muted);
   font-size:14px;
 }
-.products-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:24px;
-}
+.products-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:24px}
+.product-card{grid-column:span 2}
+.product-card:nth-child(4){grid-column:2 / span 2}
+.product-card:nth-child(5){grid-column:4 / span 2}
 .product-card{
   background:#fff;
   border:1px solid var(--line);
@@ -295,14 +294,15 @@ section{padding:84px 0}
 }
 .feature-banner-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1.08fr .92fr;
   gap:56px;
   align-items:center;
 }
 .feature-banner .section-title{color:#fff}
 .feature-banner .section-copy{color:#C0C8CF}
 .feature-banner img{
-  width:100%;
+  width:88%;
+  margin:0 auto;
   border-radius:28px;
   background:#fff;
   object-fit:contain;
@@ -405,6 +405,8 @@ footer a:hover{color:#fff}
 
 @media(max-width:960px){
   .nav-links a:not(.btn){display:none}
+  .products-grid{grid-template-columns:1fr 1fr}
+  .product-card,.product-card:nth-child(4),.product-card:nth-child(5){grid-column:auto}
   .hero,.feature-banner-grid,.brand-intro-grid,.support-grid{grid-template-columns:1fr}
   .trust-strip-grid,.feature-grid{grid-template-columns:1fr 1fr}
   .shop-head{align-items:start;flex-direction:column}
@@ -412,7 +414,7 @@ footer a:hover{color:#fff}
 @media(max-width:620px){
   section{padding:64px 0}
   nav{min-height:72px}
-  .logo img{height:44px}
+  .logo img{height:52px}
   .hero{padding:50px 0}
   .hero h1{font-size:44px}
   .hero-actions{flex-direction:column}
@@ -420,8 +422,17 @@ footer a:hover{color:#fff}
   .hero-trust{display:grid;gap:8px}
   .trust-strip-grid,.feature-grid,.footer-grid{grid-template-columns:1fr}
   .products-grid{grid-template-columns:1fr}
+  .product-card,.product-card:nth-child(4),.product-card:nth-child(5){grid-column:auto}
   .actions{flex-direction:column}
   .actions .btn{width:100%}
+}
+
+
+@media print{
+  header{position:static}
+  .hero{min-height:auto;padding:42px 0}
+  section{break-inside:avoid-page}
+  .product-card,.support-card,.feature-card,.hero-card{break-inside:avoid}
 }
 
 </style>
@@ -724,7 +735,7 @@ footer a:hover{color:#fff}
       <article class="product-card">
         <div class="product-image-wrap">
           <span class="product-badge">Extended Reach</span>
-          <img src="assets/white-single-52-main.png" alt="ARVIQUE 5.2M Single Rope White Retractable Clothesline">
+          <img src="assets/white-single-52-main-final.png" alt="ARVIQUE 5.2M Single Rope White Retractable Clothesline">
         </div>
         <div class="product-card-body">
           <h3>Single Rope 5.2M – White</h3>
