@@ -45,6 +45,138 @@ footer p,footer a{color:#A7B0B8;font-size:14px}footer h4{margin-bottom:14px}foot
 .copyright{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;font-size:13px;color:#7E8993}
 @media(max-width:800px){.nav-links a:not(.btn){display:none}.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.logo img{height:46px}.legal-card{padding:26px}.footer-grid{grid-template-columns:1fr}.hero{padding:58px 0 38px}}
+
+/* ===== ARVIQUE SITEWIDE V3 CONSISTENCY ===== */
+:root{
+  --navy:#0D1B2A;
+  --navy2:#14283B;
+  --gold:#B7955B;
+  --cream:#F8F6F1;
+  --warm:#EEE9DF;
+  --white:#fff;
+  --text:#17212B;
+  --muted:#6D747B;
+  --line:#E6E1D7;
+  --soft:#F3F0E9;
+}
+body{background:var(--cream)}
+.announcement{
+  background:var(--navy)!important;
+  color:#fff!important;
+  text-align:center!important;
+  padding:10px 16px!important;
+  font-size:13px!important;
+}
+header{
+  position:sticky!important;
+  top:0!important;
+  z-index:1000!important;
+  background:rgba(248,246,241,.96)!important;
+  backdrop-filter:blur(14px)!important;
+  border-bottom:1px solid rgba(13,27,42,.08)!important;
+}
+nav{
+  min-height:90px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:22px!important;
+}
+.logo{
+  display:flex!important;
+  align-items:center!important;
+  flex-shrink:0!important;
+}
+.logo img{
+  width:330px!important;
+  height:auto!important;
+  max-height:74px!important;
+  object-fit:contain!important;
+  display:block!important;
+  background:transparent!important;
+  padding:0!important;
+  border-radius:0!important;
+}
+.nav-links{
+  display:flex!important;
+  align-items:center!important;
+  gap:26px!important;
+}
+.nav-links a{
+  font-size:14px!important;
+  font-weight:700!important;
+}
+.nav-links a:hover{color:var(--gold)!important}
+.btn{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:48px!important;
+  padding:0 24px!important;
+  border-radius:999px!important;
+  font-weight:800!important;
+  font-size:14px!important;
+  transition:.22s!important;
+}
+.btn-primary{background:var(--navy)!important;color:#fff!important}
+.btn-primary:hover{background:var(--navy2)!important;transform:translateY(-2px)}
+.btn-outline{border:1px solid var(--navy)!important;color:var(--navy)!important;background:transparent!important}
+.btn-outline:hover{background:var(--navy)!important;color:#fff!important}
+
+.hero{
+  min-height:auto!important;
+  padding:56px 0 62px!important;
+}
+.hero h1{
+  color:var(--navy)!important;
+  font-size:clamp(46px,5.5vw,72px)!important;
+  letter-spacing:-1.8px!important;
+}
+.eyebrow{
+  color:var(--gold)!important;
+  text-transform:uppercase!important;
+  letter-spacing:2.1px!important;
+  font-size:12px!important;
+  font-weight:900!important;
+}
+.section-title{
+  color:var(--navy)!important;
+  font-size:clamp(34px,4.2vw,56px)!important;
+}
+.section-copy{color:var(--muted)!important}
+
+footer{
+  background:#08131E!important;
+  color:#fff!important;
+  padding:60px 0 28px!important;
+}
+.footer-logo img{
+  height:68px!important;
+  width:auto!important;
+  background:#fff!important;
+  border-radius:10px!important;
+  padding:6px 10px!important;
+  margin-bottom:16px!important;
+}
+footer p,footer a{color:#A7B0B8!important;font-size:14px!important}
+footer a:hover{color:#fff!important}
+.copyright{
+  border-top:1px solid rgba(255,255,255,.1)!important;
+  padding-top:24px!important;
+  font-size:13px!important;
+  color:#7E8993!important;
+}
+
+@media(max-width:960px){
+  .logo img{width:255px!important;max-height:64px!important}
+  .nav-links a:not(.btn){display:none!important}
+}
+@media(max-width:620px){
+  nav{min-height:70px!important;gap:12px!important}
+  .logo img{width:198px!important;max-height:54px!important}
+  .hero{padding:40px 0 46px!important}
+}
+
 </style>
 
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -91,11 +223,23 @@ footer p,footer a{color:#A7B0B8;font-size:14px}footer h4{margin-bottom:14px}foot
 </script>
 </head>
 <body>
-<div class="announcement">ARVIQUE • Smart Living, Elevated</div>
-<header><div class="container"><nav>
-<a class="logo" href="index.html"><img src="assets/arvique-logo.jpeg" alt="ARVIQUE Logo"></a>
-<div class="nav-links"><a href="index.html#shop">Shop</a><a href="about.html">About</a><a href="support.html">Support</a><a class="btn btn-primary" href="index.html#shop">Explore Products</a></div>
-</nav></div></header>
+<div class="announcement">Smart Living, Elevated • ARVIQUE Care Support • Warranty Registration Available</div>
+<header>
+  <div class="container">
+    <nav>
+      <a class="logo" href="index.html" aria-label="ARVIQUE Home">
+        <img src="assets/arvique-header-logo.png" alt="ARVIQUE — Smart Living, Elevated">
+      </a>
+      <div class="nav-links">
+        <a href="index.html#shop">Shop</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Support</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="index.html#shop">Explore Products</a>
+      </div>
+    </nav>
+  </div>
+</header>
 <main>
 <section class="hero"><div class="container">
 <div class="eyebrow">Legal & Privacy</div>
@@ -153,9 +297,32 @@ footer p,footer a{color:#A7B0B8;font-size:14px}footer h4{margin-bottom:14px}foot
 </article></div>
 </main>
 
-<footer><div class="container"><div class="footer-grid">
-<div><div class="footer-logo"><img src="assets/arvique-logo.jpeg" alt="ARVIQUE Logo"></div><p>Smart, thoughtfully designed essentials created to elevate everyday living.</p></div>
-<div><h4>Explore</h4><a href="index.html">Home</a><a href="index.html#shop">Shop</a><a href="about.html">About ARVIQUE</a><a href="support.html">ARVIQUE Care</a></div>
-<div><h4>Legal & Support</h4><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms & Conditions</a><a href="warranty.html">Warranty Policy</a><a href="contact.html">Contact Us</a><a href="https://docs.google.com/forms/d/e/1FAIpQLSdZ5jYbZd840u1UPojtkgNLyEBclXGgsQ8lZutkg_qkp1xWjw/viewform?usp=dialog" target="_blank" rel="noopener">Register Warranty</a></div>
-</div><div class="copyright">© 2026 ARVIQUE. All Rights Reserved. | Elario Global</div></div></footer>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><img src="assets/arvique-logo.jpeg" alt="ARVIQUE Logo"></div>
+        <p>Smart, thoughtfully designed essentials created to elevate everyday living.</p>
+        <p style="margin-top:12px;">Plot Number 66, Industrial Area Phase 2,<br>Chandigarh – 160002</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#shop">Shop</a>
+        <a href="about.html">About ARVIQUE</a>
+        <a href="support.html">ARVIQUE Care</a>
+      </div>
+      <div>
+        <h4>Support &amp; Legal</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="tel:+919915002761">+91-9915002761</a>
+        <a href="mailto:elarioglobal@gmail.com">elarioglobal@gmail.com</a>
+        <a href="warranty.html">Warranty Policy</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 ARVIQUE. All Rights Reserved. | Elario Global</div>
+  </div>
+</footer>
 </body></html>
