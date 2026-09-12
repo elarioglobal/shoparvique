@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ARVIQUE | Smart Home &amp; Space-Saving Essentials</title>
-<meta name="description" content="Shop ARVIQUE smart home essentials including retractable clotheslines designed for modern, space-conscious everyday living.">
+<title>ARVIQUE Home &amp; Living | Retractable Clotheslines</title>
+<meta name="description" content="ARVIQUE is a home and living brand by Elario Global, offering retractable clotheslines and thoughtfully designed space-saving home essentials for modern Indian homes.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -58,6 +58,15 @@ section{padding:84px 0}
 footer{background:#08131E;color:#fff;padding:64px 0 28px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:50px;margin-bottom:42px}.footer-logo img{height:70px;width:auto;background:#fff;border-radius:10px;padding:6px 10px;margin-bottom:16px}footer p,footer a{color:#A7B0B8;font-size:14px}footer h4{margin-bottom:14px}footer a{display:block;margin:8px 0}.copyright{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;font-size:13px;color:#7E8993}
 @media(max-width:900px){.nav-links a:not(.btn){display:none}.hero,.split,.support-grid{grid-template-columns:1fr}.products-grid,.feature-grid,.brand-strip-grid{grid-template-columns:1fr 1fr}.showcase-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){section{padding:64px 0}.logo img{height:46px}.hero{padding:50px 0}.hero h1{font-size:44px}.products-grid,.feature-grid,.brand-strip-grid,.footer-grid{grid-template-columns:1fr}.hero-actions,.actions{flex-direction:column}.hero-actions .btn,.actions .btn{width:100%}}
+
+.brand-intro{padding:72px 0;background:#fff}
+.brand-intro-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.brand-intro h2{color:var(--navy);font-size:clamp(34px,4vw,50px);margin-bottom:18px}
+.brand-intro p{color:var(--muted);font-size:17px;margin-bottom:16px}
+.brand-intro strong{color:var(--navy)}
+.brand-intro-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+@media(max-width:900px){.brand-intro-grid{grid-template-columns:1fr;gap:28px}}
+
 </style>
 
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -74,32 +83,54 @@ footer{background:#08131E;color:#fff;padding:64px 0 28px}.footer-grid{display:gr
 <meta name="twitter:image" content="https://www.shoparvique.com/assets/arvique-social-preview.jpg">
 
 <link rel="canonical" href="https://www.shoparvique.com/">
-<meta property="og:title" content="ARVIQUE | Smart Home &amp; Space-Saving Essentials">
-<meta property="og:description" content="Shop ARVIQUE smart home essentials including retractable clotheslines designed for modern, space-conscious everyday living.">
+<meta property="og:title" content="ARVIQUE Home &amp; Living | Retractable Clotheslines">
+<meta property="og:description" content="ARVIQUE is a home and living brand by Elario Global, offering retractable clotheslines and thoughtfully designed space-saving home essentials for modern Indian homes.">
 <meta property="og:url" content="https://www.shoparvique.com/">
-<meta name="twitter:title" content="ARVIQUE | Smart Home &amp; Space-Saving Essentials">
-<meta name="twitter:description" content="Shop ARVIQUE smart home essentials including retractable clotheslines designed for modern, space-conscious everyday living.">
+<meta name="twitter:title" content="ARVIQUE Home &amp; Living | Retractable Clotheslines">
+<meta name="twitter:description" content="ARVIQUE is a home and living brand by Elario Global, offering retractable clotheslines and thoughtfully designed space-saving home essentials for modern Indian homes.">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "ARVIQUE",
-  "url": "https://www.shoparvique.com",
-  "logo": "https://www.shoparvique.com/assets/arvique-logo.jpeg",
-  "email": "elarioglobal@gmail.com",
-  "telephone": "+919915002761",
-  "brand": {
-    "@type": "Brand",
-    "name": "ARVIQUE"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Plot Number 66, Industrial Area Phase 2",
-    "addressLocality": "Chandigarh",
-    "postalCode": "160002",
-    "addressCountry": "IN"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.shoparvique.com/#organization",
+      "name": "ARVIQUE",
+      "legalName": "Elario Global",
+      "url": "https://www.shoparvique.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.shoparvique.com/assets/arvique-logo.jpeg"
+      },
+      "description": "ARVIQUE is an Indian home and living products brand by Elario Global, offering retractable clotheslines and thoughtfully designed space-saving home essentials.",
+      "email": "elarioglobal@gmail.com",
+      "telephone": "+919915002761",
+      "brand": {
+        "@type": "Brand",
+        "name": "ARVIQUE",
+        "slogan": "Smart Living, Elevated"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot Number 66, Industrial Area Phase 2",
+        "addressLocality": "Chandigarh",
+        "postalCode": "160002",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.shoparvique.com/#website",
+      "url": "https://www.shoparvique.com/",
+      "name": "ARVIQUE",
+      "alternateName": "ARVIQUE Home & Living",
+      "publisher": {
+        "@id": "https://www.shoparvique.com/#organization"
+      },
+      "inLanguage": "en-IN"
+    }
+  ]
 }
 </script>
 </head>
@@ -113,15 +144,31 @@ footer{background:#08131E;color:#fff;padding:64px 0 28px}.footer-grid{display:gr
 </div></nav></div></header>
 <main>
 <section><div class="container hero">
-<div><div class="eyebrow">ARVIQUE • Smart Living, Elevated</div><h1>Better design for everyday living.</h1>
-<p>Smart, space-conscious home essentials designed to make everyday routines simpler, cleaner and more considered.</p>
+<div><div class="eyebrow">ARVIQUE HOME &amp; LIVING • SMART LIVING, ELEVATED</div><h1>Better design for everyday living.</h1>
+<p>Discover ARVIQUE retractable clotheslines and thoughtfully designed space-saving home essentials created for modern Indian homes.</p>
 <div class="hero-actions"><a href="#shop" class="btn btn-primary">Shop ARVIQUE</a><a href="#why" class="btn btn-outline">Discover the Brand</a></div></div>
 <div class="hero-card"><img src="assets/white-double-42-hero.jpeg" alt="ARVIQUE retractable clothesline in a modern balcony"></div>
 </div></section>
 <div class="brand-strip"><div class="container brand-strip-grid">
 <div class="brand-pill"><span>01</span> Thoughtful Design</div><div class="brand-pill"><span>02</span> Modern Aesthetics</div><div class="brand-pill"><span>03</span> Everyday Function</div><div class="brand-pill"><span>04</span> Customer Support</div>
 </div></div>
-<section id="shop"><div class="container"><div class="eyebrow">Shop ARVIQUE</div><h2 class="section-title">Designed for modern homes.</h2><p class="section-copy">Explore our growing range of smart laundry and home-living solutions.</p>
+<section class="brand-intro" aria-labelledby="about-arvique-home">
+  <div class="container brand-intro-grid">
+    <div>
+      <div class="eyebrow">About ARVIQUE</div>
+      <h2 id="about-arvique-home">A modern home &amp; living brand from India.</h2>
+    </div>
+    <div>
+      <p><strong>ARVIQUE</strong> is a home and living products brand by <strong>Elario Global</strong>, headquartered in Chandigarh, India. We focus on practical, space-conscious products that combine everyday functionality with clean modern design.</p>
+      <p>Our current range includes <strong>wall-mounted retractable clotheslines</strong> for balconies, bathrooms, utility areas and compact laundry spaces, with more thoughtfully designed home essentials planned as the brand grows.</p>
+      <div class="brand-intro-links">
+        <a href="about.html" class="btn btn-outline">About ARVIQUE</a>
+        <a href="#shop" class="btn btn-primary">Explore Clotheslines</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="shop"><div class="container"><div class="eyebrow">ARVIQUE Retractable Clotheslines</div><h2 class="section-title">Space-saving drying solutions for modern homes.</h2><p class="section-copy">Shop ARVIQUE wall-mounted retractable clotheslines in single-rope and double-rope designs for balconies, bathrooms, utility areas and everyday laundry spaces.</p>
 <div class="products-grid">
 <article class="product-card"><img src="assets/black-42-main.jpeg" alt="ARVIQUE 4.2M Single Rope Black Retractable Clothesline"><div class="product-card-body"><h3>Retractable Clothesline 4.2M</h3><p>Single Rope • Black • Wall Mounted</p><div class="product-price">₹1,099</div><div class="actions"><a href="products/black-single-42.html" class="btn btn-outline">View Details</a><a href="https://www.amazon.in/dp/B0HDT9NF1F" target="_blank" class="btn btn-primary">Buy on Amazon</a></div></div></article>
 <article class="product-card"><img src="assets/white-double-42-main.png" alt="ARVIQUE 4.2M Double Rope White Retractable Clothesline"><div class="product-card-body"><h3>Retractable Clothesline 4.2M</h3><p>Double Rope • White • Wall Mounted</p><div class="product-price">₹1,259</div><div class="actions"><a href="products/white-double-42.html" class="btn btn-outline">View Details</a><a href="https://www.amazon.in/dp/B0HFCY5SKC" target="_blank" class="btn btn-primary">Buy on Amazon</a></div></div></article>
