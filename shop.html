@@ -1,2 +1,50 @@
 <!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shop ARVIQUE | Smart Living, Elevated</title><meta name="description" content="Shop ARVIQUE home and living essentials directly from ARVIQUE."><link rel="icon" href="favicon.ico"><link rel="stylesheet" href="assets/store.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"></head><body><div class="announcement">Direct from ARVIQUE • Secure checkout • COD available</div><header><div class="store-shell"><nav style="min-height:90px;display:flex;align-items:center;justify-content:space-between;gap:20px"><a href="index.html"><img src="assets/arvique-header-logo.png" alt="ARVIQUE" style="width:250px;max-height:65px;object-fit:contain"></a><div style="display:flex;gap:18px;align-items:center"><a href="index.html">Home</a><a href="cart.html" class="store-btn primary">Cart <span class="cart-badge" data-cart-count>0</span></a></div></nav></div></header><main class="store-shell"><div class="store-head"><div><div class="eyebrow">ARVIQUE SHOP</div><h1 class="store-title">Smart living,<br>chosen directly.</h1><p class="store-sub">Shop ARVIQUE products directly from the brand.</p></div></div><div id="grid" class="store-grid"></div></main><script src="store-config.js"></script><script src="store-products.js"></script><script src="assets/store.js"></script><script>
-const grid=document.getElementById('grid'); const fallback=window.ARVIQUE_FALLBACK_PRODUCTS||[]; async function load(){let ps=fallback;try{const r=await fetch(window.ARVIQUE_CONFIG.API+'/api/products');if(r.ok){const d=await r.json();if(d.products?.length)ps=d.products;}}catch(e){} grid.innerHTML=ps.map(p=>`<article class="store-card"><a href="${p.url}"><img src="${p.image}" alt="${p.name}"></a><div class="store-card-body"><h3>${p.name}</h3><div class="store-price">${ARVIQUEStore.money(p.price)}</div><div class="store-actions"><a class="store-btn" href="${p.url}">View Product</a><button class="store-btn primary" onclick='ARVIQUEStore.add(${JSON.stringify(p)})'>Add to Cart</button></div></div></article>`).join('');load();</script></body></html>
+const grid=document.getElementById('grid');
+const fallback=window.ARVIQUE_FALLBACK_PRODUCTS||[];
+function renderProducts(products){
+  grid.innerHTML=products.map(p=>{
+    const url=p.product_url||p.url||('#');
+    const image=p.image||'';
+    const name=p.name||'ARVIQUE Product';
+    const price=Number(p.price||0);
+    return `<article class="store-card">
+      <a href="${url}"><img src="${image}" alt="${name}"></a>
+      <div class="store-card-body">
+        <h3>${name}</h3>
+        <div class="store-price">${ARVIQUEStore.money(price)}</div>
+        <div class="store-actions">
+          <a class="store-btn" href="${url}">View Product</a>
+          <button class="store-btn primary" type="button" data-add="${String(p.slug||'').replace(/"/g,'&quot;')}">Add to Cart</button>
+        </div>
+      </div>
+    </article>`;
+  }).join('');
+  grid.querySelectorAll('[data-add]').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const slug=btn.getAttribute('data-add');
+      const product=products.find(x=>x.slug===slug);
+      if(product) ARVIQUEStore.add(product);
+    });
+  });
+}
+
+// Render immediately from the built-in catalogue so the shop never appears blank.
+renderProducts(fallback);
+
+// Then refresh prices/stock from D1 without blocking the initial render.
+(async function refreshFromAPI(){
+  try{
+    const api=(window.ARVIQUE_CONFIG&&window.ARVIQUE_CONFIG.API)||'';
+    if(!api)return;
+    const r=await fetch(api+'/api/products',{cache:'no-store'});
+    if(!r.ok)return;
+    const d=await r.json();
+    if(!Array.isArray(d.products)||!d.products.length)return;
+    const fresh=d.products.map(p=>({...p,url:p.product_url||p.url||'#'}));
+    renderProducts(fresh);
+  }catch(e){
+    // Keep the already-rendered fallback catalogue visible if the API is unavailable.
+    console.warn('ARVIQUE live catalogue unavailable; using fallback catalogue.',e);
+  }
+})();
+</script></body></html>
